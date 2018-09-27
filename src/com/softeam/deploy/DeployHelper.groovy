@@ -1,14 +1,14 @@
 package com.softeam.deploy;
 
-class DeployHelper {
+public class DeployHelper {
 
-    DeployHelper instance = new DeployHelper();
+    public DeployHelper instance = new DeployHelper();
 
     private DeployHelper() {
 
     }
 
-    void configureDockerRegistry(sh) {
+    public void configureDockerRegistry(sh) {
         sh 'mkdir /etc/docker'
 
         // le registry est insecure (pas de https)
@@ -16,7 +16,7 @@ class DeployHelper {
 
     }
 
-    void configureGIT(sh) {
+    public void configureGIT(sh) {
         sh 'mkdir /root/.ssh'
 
         sh 'cp /home/jenkins/.ssh/id_rsa /root/.ssh/id_rsa'
