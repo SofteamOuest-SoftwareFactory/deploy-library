@@ -2,12 +2,6 @@ package com.softeam.deploy;
 
 public class DeployHelper implements Serializable {
 
-    //public static final DeployHelper instance = new DeployHelper()
-
-    /* private DeployHelper() {
-
-    } */
-
     def steps
 
     public DeployHelper(steps) { this.steps = steps }
