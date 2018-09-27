@@ -2,11 +2,11 @@ package com.softeam.deploy;
 
 public class DeployHelper {
 
-    public static final DeployHelper instance = new DeployHelper()
+    //public static final DeployHelper instance = new DeployHelper()
 
-    private DeployHelper() {
+    /* private DeployHelper() {
 
-    }
+    } */
 
     public void configureDockerRegistry(sh) {
         sh 'mkdir /etc/docker'
