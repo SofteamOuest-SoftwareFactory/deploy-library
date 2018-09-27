@@ -1,4 +1,6 @@
-public class DeployHelper {
+package com.softeam.deploy;
+
+class DeployHelper {
 
     DeployHelper instance = new DeployHelper();
 
