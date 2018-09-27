@@ -8,6 +8,11 @@ public class DeployHelper {
 
     } */
 
+    public DeployHelper() {
+
+        
+    }
+
     public void configureDockerRegistry(sh) {
         sh 'mkdir /etc/docker'
 
