@@ -13,6 +13,11 @@ public class DeployHelper implements Serializable {
         // le registry est insecure (pas de https)
         steps.sh 'echo {"insecure-registries" : ["registry.k8.wildwidewest.xyz"]} > /etc/docker/daemon.json'
 
+        steps.withCredentials([steps.usernamePassword(credentialsId: 'nexus_user', usernameVariable: 'username', passwordVariable: 'password')]) {
+
+            steps.sh "docker login -u ${username} -p ${password} registry.k8.wildwidewest.xyz"
+        }
+
     }
 
     public void configureGIT() {
