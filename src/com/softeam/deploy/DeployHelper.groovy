@@ -1,14 +1,11 @@
 public class DeployHelper {
 
-    private DeployHelper instance = new DeployHelper();
+    DeployHelper instance = new DeployHelper();
 
     private DeployHelper() {
 
     }
 
-    instance() {
-        return instance;
-    }
 
     void configureGIT(sh) {
         sh 'mkdir /root/.ssh'
