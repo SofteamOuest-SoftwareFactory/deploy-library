@@ -2,7 +2,7 @@ package com.softeam.deploy;
 
 public class DeployHelper {
 
-    public DeployHelper instance = new DeployHelper();
+    public static final DeployHelper instance = new DeployHelper()
 
     private DeployHelper() {
 
