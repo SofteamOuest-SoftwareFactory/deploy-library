@@ -14,10 +14,6 @@ class DeployHelper {
         // le registry est insecure (pas de https)
         sh 'echo {"insecure-registries" : ["registry.k8.wildwidewest.xyz"]} > /etc/docker/daemon.json'
 
-        withCredentials([usernamePassword(credentialsId: 'nexus_user', usernameVariable: 'username', passwordVariable: 'password')]) {
-
-            sh "docker login -u ${username} -p ${password} registry.k8.wildwidewest.xyz"
-        }
     }
 
     void configureGIT(sh) {
