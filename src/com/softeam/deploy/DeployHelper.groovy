@@ -10,8 +10,8 @@ public class DeployHelper implements Serializable {
 
     def steps
 
-    DeployHelper(steps) { this.steps = steps }
-    
+    public DeployHelper(steps) { this.steps = steps }
+
 
     public void configureDockerRegistry() {
         steps.sh 'mkdir /etc/docker'
