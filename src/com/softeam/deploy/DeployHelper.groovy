@@ -1,4 +1,4 @@
-class DeployHelper {
+public class DeployHelper {
 
     private DeployHelper instance = new DeployHelper();
 
